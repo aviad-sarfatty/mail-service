@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: mail-service
+
+  datasource:
+    url: jdbc:mysql://10.100.102.51:3306/maildb   
+    username: appuser                         
+    password: secret                           
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  profiles:
+    active: dev  
+
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+  mail:
+    # This property will hold which mail sender to use: "gmail" or "exchange"
+    selected: gmail
+
+logging:
+  level:
+    root: INFO
+    com.example.mailservice: DEBUG
+
+server:
+  port: 8080
+
+mail:
+  gmail:
+    host: smtp.gmail.com
+    port: 587
+    username: aviad.sarfatty@gmail.com
+    password: RoInDo142910
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.trust: smtp.gmail.com
+
+  exchange:
+    host: exchange.company.com
+    port: 587
+    username: your-exchange-username
+    password: your-exchange-password
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.ssl.trust: exchange.company.com
+
+# Custom mail service configuration
+mailservice:
+  api-keys:
+    order-service: abcdef123456
+    notification-service: qwerty09876

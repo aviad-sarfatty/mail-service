@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.100.102.51:3306/maildb_test?useSSL=false&allowPublicKeyRetrieval=true
+    username: appuser
+    password: test_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop     # recreate schema on test startup
+    show-sql: false
+
+logging:
+  level:
+    root: WARN
+    com.example.mailservice: INFO
+
+server:
+  port: 8081
+
+mailservice:
+  api-keys:
+    test-service: test-api-key

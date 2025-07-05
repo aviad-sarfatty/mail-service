@@ -1,0 +1,39 @@
+# === Java / Maven ===
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# === Eclipse ===
+.project
+.classpath
+.settings/
+.apt_generated/
+.factorypath
+
+# === IntelliJ (if used in parallel) ===
+.idea/
+*.iml
+out/
+
+# === OS / Misc ===
+.DS_Store
+Thumbs.db
+
+# === Logs / temp files ===
+*.log
+logs/
+*.tmp
+
+# === Spring Boot ===
+spring.log
+
+# === Test coverage / build tools ===
+.coverage/
+jacoco.exec
+build/
+
+# === Git ===
+*.swp
+*.swo
