@@ -40,7 +40,7 @@ mail:
     host: smtp.gmail.com
     port: 587
     username: aviad.sarfatty@gmail.com
-    password: RoInDo142910
+    password: ************
     protocol: smtp
     properties:
       mail.smtp.auth: true
